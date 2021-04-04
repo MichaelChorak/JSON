@@ -10,6 +10,7 @@ const ingredientsList = document.querySelector('#ingredients');
 const showMoreInfo = document.querySelector('#styleABtn');
 const instructions = document.querySelector('#instructions');
 const closeInfo = document.querySelector('.closeBtn');
+const name = document.querySelector('#name');
 
 
 window.addEventListener('scroll', () => {
@@ -86,6 +87,7 @@ request.onload = function() {
 
       ingredientsList.innerHTML = ingredients;
       instructions.innerHTML = specificDrink.drinks[0].strInstructions;
+      name.innerHTML = specificDrink.drinks[0].strDrink;
 
       function specificDrinkInformation() {
         informationSection.classList.add('showInformationSection');
